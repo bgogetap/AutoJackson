@@ -1,0 +1,20 @@
+apply plugin: 'java'
+apply plugin: "net.ltgt.apt"
+
+sourceCompatibility = 1.7
+
+sourceSets {
+    source
+}
+
+dependencies {
+    compile "com.google.auto.value:auto-value:$autoValueVersion"
+    apt "com.google.auto.value:auto-value:$autoValueVersion"
+
+    apt project(':library')
+    compile "com.fasterxml.jackson.core:jackson-core:$jacksonVersion"
+    compile "com.fasterxml.jackson.core:jackson-annotations:$jacksonVersion"
+    compile "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
+
+    testCompile 'junit:junit:4.11'
+}

@@ -1,0 +1,40 @@
+apply plugin: 'java'
+apply plugin: "net.ltgt.apt"
+
+sourceCompatibility = 1.7
+
+buildscript {
+    repositories {
+        jcenter()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.1.0'
+        classpath "net.ltgt.gradle:gradle-apt-plugin:0.6"
+    }
+}
+
+ext {
+    jacksonVersion = '2.7.0'
+    autoValueVersion = '1.2'
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+
+    /**
+     * Prevents sporadic compilation error: 'Bad service configuration file, or exception thrown while constructing
+     * Processor object: javax.annotation.processing.Processor: Error reading configuration file'
+     *
+     * See https://discuss.gradle.org/t/gradle-not-compiles-with-solder-tooling-jar/7583/20
+     */
+    tasks.withType(JavaCompile) { options.fork = true }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
