@@ -1,4 +1,4 @@
-[ ![Download](https://api.bintray.com/packages/bgogetap/maven/auto-jackson/images/download.svg) ](https://bintray.com/bgogetap/maven/auto-jackson/_latestVersion) [![Build Status](https://travis-ci.org/bgogetap/AutoJackson.svg?branch=master)](https://travis-ci.org/bgogetap/AutoJackson)
+[ ![Download](https://api.bintray.com/packages/bgogetap/android/auto-jackson/images/download.svg) ](https://bintray.com/bgogetap/android/auto-jackson/_latestVersion) [![Build Status](https://travis-ci.org/bgogetap/AutoJackson.svg?branch=master)](https://travis-ci.org/bgogetap/AutoJackson)
 # AutoJackson
 ## An Auto Value Extension that allows minimal setup of Auto Value classes when using Jackson
 
