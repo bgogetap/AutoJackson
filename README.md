@@ -19,8 +19,6 @@ Example:
     }
 ```
 Annotating the abstract methods with @JsonProperty is optional. If left out, the annotation will be added for you in the Builder class using the method name as the value.
-## Streaming support
-Support for Jackson's streaming API is currently a work in progress
 
 ## Setup
 ```groovy
